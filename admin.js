@@ -37,6 +37,9 @@ function Guardar(){
         legajo.value=""
         fecha.value=""
         empleado.focus()
+
+        const divNoProducts = document.getElementById("alert-noProducts")
+        divNoProducts.innerHTML = ""
         Listar()
         Estadisticas()
     }

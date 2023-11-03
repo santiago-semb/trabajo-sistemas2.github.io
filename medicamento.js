@@ -47,7 +47,9 @@ function CargarMedicamento(){
         let jsonMedicamentos = JSON.stringify(medicamentos)
         localStorage.setItem("medicamentos", jsonMedicamentos)
 
-        window.location.reload()
+        const divNoMedicamentos = document.getElementById("alert-noProducts")
+        divNoMedicamentos.innerHTML = ""
+        ListarMedicamentosAdmin()
     }
 }
 

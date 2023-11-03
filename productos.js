@@ -46,7 +46,9 @@ function CargarProducto(){
       let jsonProductos = JSON.stringify(productos)
       localStorage.setItem("productos", jsonProductos)
 
-      window.location.reload()
+      const divNoProducts = document.getElementById("alert-noProducts")
+      divNoProducts.innerHTML = ""
+      ListarProductosAdmin()
   }
 }
 
