@@ -54,7 +54,7 @@ function CargarMedicamento(){
 }
 
 function ListarMedicamentos(){
-    if(medicamentos.length == 0){
+    if(medicamentos.length == 0 || !localStorage.getItem("medicamentos")){
         const divNoMedicamentos = document.getElementById("alert-noMedicamentos")
         divNoMedicamentos.innerHTML = `
             <div id="alert" class="alertpr"> 
@@ -232,7 +232,7 @@ function closeCart() {
 }
 
 function ListarMedicamentosAdmin(){
-    if(medicamentos.length == 0){
+    if(medicamentos.length == 0 || !localStorage.getItem("medicamentos")){
         const divNoProducts = document.getElementById("alert-noProducts")
         divNoProducts.innerHTML = `
         <div id="alert" class="alertpr"> 

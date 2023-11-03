@@ -53,7 +53,7 @@ function CargarProducto(){
 }
 
 function ListarProductos(){
-    if(productos.length == 0){
+    if(productos.length == 0 || !localStorage.getItem("productos")){
         const divNoProducts = document.getElementById("alert-noProducts")
         divNoProducts.innerHTML = `
             <div id="alert" class="alertpr"> 
@@ -233,7 +233,7 @@ function closeCart() {
 
 
 function ListarProductosAdmin(){
-    if(productos.length == 0){
+    if(productos.length == 0 || localStorage.getItem("productos")){
         const divNoProducts = document.getElementById("alert-noProducts")
         divNoProducts.innerHTML = `
         <div id="alert" class="alertpr"> 
