@@ -48,7 +48,7 @@ function Guardar(){
 
 function Listar(){
     const tabla = document.getElementById("tabla-vacunacion")
-    if(data.length == 0){
+    if(data.length == 0 || !localStorage.getItem("data")){
         const divAlert = document.getElementById("alerta-nodata")
         divAlert.innerHTML = `
         <div class="alert alert-warning" style="width: 70%; margin: 0 auto; margin-top: 20px;" role="alert">
