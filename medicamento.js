@@ -232,7 +232,7 @@ function closeCart() {
 }
 
 function ListarMedicamentosAdmin(){
-    if(medicamentos.length == 0 || !localStorage.getItem("medicamentos")){
+    if(medicamentos.length == 0 || !localStorage.getItem("medicamentos") || localStorage.getItem("medicamentos") == null){
         const divNoProducts = document.getElementById("alert-noProducts")
         divNoProducts.innerHTML = `
         <div id="alert" class="alertpr"> 
