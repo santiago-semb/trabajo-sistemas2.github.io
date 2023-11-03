@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin', sans-serif;
+}
+
+#header {
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#logo-farmacity {
+    width: 230px;
+    height: 75px;
+   background-color: #e6e3e3;
+   padding: 10px;
+   border-radius: 0.2em;
+   margin-left: 15px;
+   margin-bottom: 10px;
+   animation-name: animacion1;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes animacion1 {
+  to {
+    filter: saturate(150%);
+  }
+  
+}
+
+/* Estilos para el menú de navegación horizontal */
+.ul-carrousel {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00A84D;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white; /* Color del texto del menú */
+    text-align: center;
+    padding: 18px 19px; /* Espacio de relleno para los elementos del menú */
+    transition: 200ms all;
+  }
+
+  li a:hover {
+    background-color: #05922f;
+    color: white;
+  }
+
+  #myCarousel {
+    max-height: 50px;
+    min-height: 50px;
+  }
+
+.img-carrousel {
+    width: 100%;
+    max-height: 250px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  margin-right: 50px; /* Ajusta el margen según tu preferencia */
+  color: black;
+}
+
+.iconos {
+  margin-top: 45px;
+}
+
+#span-buscador {
+  width: 35%;
+}
+
+#buscador {
+  height: 45px;
+  margin-top: 35px;
+  width: 90%;
+  padding-left: 15px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+}
+
+#buscador:focus {
+    outline: none; /* Esto elimina el contorno predeterminado en algunos navegadores */
+}
+
+#icon-search {
+  background-color: #ccc;
+  color: white;
+  height: 45px;
+  padding: 15px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  cursor: pointer;
+  color: gray;
+}
+
+.carrousel-span {
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#publi-1, #publi-2, #publi-3 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 60px;
+  max-height: 60px;
+  color: white;
+  text-align: center;
+  background-color: #00A84D;
+  line-height: 30px;
+}
+
+
+#logo-tufarmacity {
+  border-radius: 0.5em;
+  margin-top: 30px;
+  margin-right: 25px;
+  border: 1px solid #ccc;
+  transition: 500ms all;
+}
+
+#logo-tufarmacity:hover {
+  transform: rotate(360deg);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 45px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 3; 
+  margin-top: 10px;
+  border-radius: 0.2em;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  width: 180px;
+}
+
+.dropdown-content a:hover {
+  color: #00A84D;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  padding: 10px;
+  border-radius: 0.3em;
+  transition: 70ms all;
+  color: gray;
+}
+
+.dropbtn:hover {
+  border-bottom: 2px solid #00A84D;
+  border-radius: 0em;
+  color: #00A84D;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 300px;
+  min-width: 300px;
+  margin: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-img {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.card .card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card .card-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card .card-description {
+  color: #666;
+  margin-bottom: 15px;
+  text-transform: lowercase;
+}
+
+.card .card-price {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card .card-button {
+  background: rgb(186,61,8);
+  background: linear-gradient(0deg, rgba(186,61,8,1) 0%, rgba(221,88,16,1) 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  transition: 200ms all;
+}
+
+#texto-escrito {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  white-space: pre-line;
+}
+
+#div-seccion-ayuda {
+  width: 100%;
+  min-height: 50px;
+  max-height: 50px;
+  background-color: #00A84D;
+  text-align: center;
+}
+
+.footer {
+  background-color: #292929;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 0;
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer-section {
+  width: 250px;
+  margin: 20px;
+  text-align: left;
+}
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+.footer-section a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-social {
+  margin-top: 20px;
+}
+.footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+.custom-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.custom-alert .close-btn {
+  color: #721c24;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.alertpr {
+  padding: 20px;
+  background-color: rgb(224, 119, 70);
+  color: whitesmoke;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+#carrito {
+  background-color: whitesmoke;
+  border: 2px solid rgb(236, 90, 36);
+  border-radius: 2em;
+  transition: 200ms all;
+  padding: 10px;
+  margin-top: -10px;
+  color: rgb(236, 90, 36);
+}
+
+#carrito:hover {
+  background-color: rgb(236, 90, 36);
+  color: whitesmoke;
+}
+
+/* Estilos para el modal y otros elementos */
+        /* ... (estilos CSS) ... */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: 10% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 30%;
+          max-height: 70%;
+          overflow: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+      }
+
+      .close {
+          color: #aaa;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+      }
+
+      #cart-items {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      #cart-items li {
+          display: block;
+          margin: 10px 0;
+      }
+
+    .contenedor-tarjeta {
+        width: 400px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        animation: mover 10s infinite alternate;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-tarjeta2 {
+      width: 400px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+      animation: mover2 10s infinite alternate;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+    @keyframes mover {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(250px);
+        }
+    }
+
+    @keyframes mover2 {
+      0% {
+          transform: translateX(250px);
+      }
+      100% {
+          transform: translateX(0);
+      }
+  }
+
+    .contenedor-tarjeta img {
+        width: 100%;
+        height: 150px;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .contenedor-padre {
+      display: flex;
+  }
+
+  .mitad-izquierda, .mitad-derecha {
+      flex: 1;
+  }
+
+  .mitad-izquierda {
+      background-color: #f3f3f3;
+  }
+
+  .mitad-derecha {
+      background-color: #ccc;
+  }
+
+#img-portada-tufarmacity {
+  width: 100%;
+  height: 500px;
+}
+
+.mini-container {
+  width: 100%;
+  height: auto;
+}
+
+.tabla {
+  width: 80%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.tabla td {
+  padding: 30px;
+}
+
+.tabla td img {
+  width: 200px;
+  height: 100px;
+  border-radius: 0.5em;
+}
+
+.flotar {
+  animation: flotar 2s infinite ease-in-out alternate;
+}
+.flotar2 {
+  animation: flotar2 3s infinite ease-in-out alternate;
+}
+.flotar3 {
+  animation: flotar 2s infinite ease-in-out alternate;
+}
+.flotar4 {
+  animation: flotar2 3s infinite ease-in-out alternate;
+}
+.flotar5 {
+  animation: flotar 4s infinite ease-in-out alternate;
+}
+.flotar6 {
+  animation: flotar3 3s infinite ease-in-out alternate;
+}
+.flotar7 {
+  animation: flotar 2s infinite ease-in-out alternate;
+}
+.flotar8 {
+  animation: flotar2 43s infinite ease-in-out alternate;
+}
+
+@keyframes flotar {
+  0% {
+      transform: translateY(4px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes flotar2 {
+  0% {
+      transform: translateY(4px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes flotar3 {
+  0% {
+      transform: translateY(4px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+#textCarrito {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+#priceCarrito {
+  font-weight: bold;
+  font-size: 18px;
+  float: right;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1338px) {
+  .contenedor-tarjeta {
+    width: 350px;
+  }
+
+  .contenedor-tarjeta2 {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .contenedor-tarjeta {
+    width: 320px;
+  }
+
+  .contenedor-tarjeta2 {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 1194px) {
+  .contenedor-tarjeta {
+    width: 290px;
+  }
+
+  .contenedor-tarjeta2 {
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 1108px) {
+  .contenedor-tarjeta {
+    width: 450px;
+    animation-name: none;
+    position:static;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .contenedor-tarjeta2 {
+    width: 450px;
+    animation-name: none;
+    position:static;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1256px) {
+    #buscador {
+      width: 80%;
+    }
+
+    .dropdown {
+      margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1188px) {
+  .dropdown {
+    margin-right: 10px;
+    margin-left: -10px;
+  }
+}
+
+
+@media screen and (max-width: 1034px) {
+  #buscador {
+    width: 75%;
+  }
+
+  .dropdown {
+    font-size: 12px;
+  }
+
+  #logo-tufarmacity {
+    margin-right: 20px;
+  }
+  
+}
+
+
+#boton-admin {
+  position: fixed;
+  padding: 20px;
+  border-radius: 2em;
+  border: 1px solid #333;
+  background-color: #292929;
+  bottom: 0;
+  right: 0;
+  margin-right: 80px;
+  margin-bottom: 70px;
+  z-index: 3;
+}
+
+#boton-admin-a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#boton-admin i {
+  font-size: 22px;
+}
+
+#boton-admin-a img {
+  width: 50px;
+  height: 50px;
+}
+
+.activo {
+  color: red;
+}
+
+#divBotonEmpleados {
+  width: 100%;
+  height: 50px;
+  background-color: orangered;
+}

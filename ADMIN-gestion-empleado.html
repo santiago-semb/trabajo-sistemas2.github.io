@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacity</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d3ba0e2c6d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/vacunacion/styles.css">
+    <link rel="stylesheet" href="./assets/styles/admin-inicio/styles.css">
+    <link rel="stylesheet" href="./assets/styles/admin-productos/styles.css">
+    <link rel="stylesheet" href="./assets/styles/admin-formulario-empleado/styles.css">
+</head>
+<body>       
+  <header id="header">
+    <div class="icon-container">
+      <h1><img src="assets/img/logo-farmacity.png" class="icon" id="logo-farmacity" alt="logo-farmacity"><span id="admin-title">admin</span></h1>
+      
+
+    <span id="menu-admin">
+        <a href="./ADMIN-inicio.html"><button class="boton-header"><i class="fa-solid fa-house-chimney"></i> <span class="textMenuAdmin">Inicio</span></button></a>
+        <a href="./ADMIN-productos.html"><button class="boton-header"><i class="fa-solid fa-bag-shopping"></i> <span class="textMenuAdmin">Productos</span></button></a>
+        <a href="./ADMIN-medicamentos.html"><button class="boton-header"><i class="fa-solid fa-kit-medical"></i> <span class="textMenuAdmin">Medicamentos</span></button></a>
+        <a href="./ADMIN-vacunacion.html"><button class="boton-header"><i class="fa-solid fa-syringe"></i> <span class="textMenuAdmin">Turnos Vacunación</span></button></a>
+        <a href="./ADMIN-gestion-empleado.html"><button class="boton-header"><i class="fa-solid fa-user-tie"></i> <span class="textMenuAdmin">Empleados</span></button></a>
+    </span>
+    
+      
+      <span>
+        <a href="farmacity.html"><img src="./assets/img/tufarmacity.png" alt="tu-farmacity" id="logo-tufarmacity"></a>
+      </span>
+    </div>
+    <div style="height: 5px; width: 100%; background-color: orangered;"></div>
+</header>
+
+<main id="main-productos" style="min-height: 600px;">
+  <div class="left-pane">
+
+    <div id="alert-noProducts"></div>
+
+    <div id="container-tabla">
+      <tbody id="admin-tabla-empleados-farmacity"></tbody>
+    </div>
+    
+    <div id="container-estadisticas" style="margin-bottom: 20px;">
+      
+    </div>
+
+  </div>
+
+
+  <div class="right-pane">
+
+    <form id="gestion-empleado-farmacity" >
+      <section class="formulario-farmacity"><br>
+          <input type="text" placeholder="Empleado" id="_txtEmpleado-farmacity" class="campo-farmacity"><br><br>
+          <input type="number" placeholder="N° Legajo" id="_txtLegajo-farmacity" class="campo-farmacity"><br><br>
+          <input type="date" placeholder="Fecha" id="_txtFecha-farmacity" class="campo-farmacity"><br>
+          <label for="Turno">Selecciona un turno:</label>
+          <select  id="_txtTurno-farmacity"  class="campo-farmacity">
+              <option value="Mañana" id="dia" >Mañana</option>
+              <option value="Tarde" id="tarde">Tarde</option>
+              <option value="Noche" id="noche">Noche</option>
+          </select>
+          <label for="Asistencia">Asistencia</label>
+          <select  id="_txtAsistencia-farmacity" class="campo-farmacity">
+              <option value="Asistio" id="si">SI</option>
+              <option value="No asistio" id="no">NO</option>
+          </select>
+      </section>
+      <section>
+          <input type="button" value="Guardar" onclick="Guardar()" class="boton-farmacity">
+      </section>
+  </form>
+  </div>
+
+  </main>
+  
+
+
+</body>
+<script src="./js/admin-empleado-farmacity/admin-farmacity.js"></script>
+<script src="./js/admin-empleado/admin.js"></script>
+
+</html>

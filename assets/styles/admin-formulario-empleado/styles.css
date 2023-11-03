@@ -1,0 +1,94 @@
+/* Estilos para el formulario */
+.formulario-farmacity {
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 3px;
+}
+
+.campo-farmacity {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.campo-farmacity:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+.boton-farmacity {
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: 500ms;
+    margin-bottom: 25px;
+}
+
+.boton-farmacity:hover {
+    color: #000;
+}
+
+form#gestion-empleado-farmacity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 0;
+}
+
+/* Estilos para las estadísticas */
+#container-estadisticas2 {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pEstadisticas {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#pEstadisticas strong {
+    font-weight: bold;
+    color: #2e4f72;
+}
+
+#container-estadisticas2 > p {
+    margin-bottom: 10px;
+}
+
+#pEstadisticas > span {
+    font-weight: bold;
+    color: #076bd6;
+}
+
+.btn-delete-empleado {
+    color: gray;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 100ms all;
+}
+
+.btn-delete-empleado:hover {
+    color: red;
+}
