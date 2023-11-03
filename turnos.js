@@ -77,7 +77,7 @@ function Listar(){
         `
         const tbody = document.getElementById("tbody-vacunacion")
         for(let i=0; i<data.length; i++){
-            let icon = (data[i].estado) ? "./assets/icons/check-icon.png" : "./assets/icons/fail-icon.png"
+            let icon = (data[i].estado) ? "check-icon.png" : "fail-icon.png"
             tbody.innerHTML += `
                 <tr class='tr-data'>
                     <td>${data[i].id}</td>
@@ -87,7 +87,7 @@ function Listar(){
                     <td>${data[i].fecha}</td>
                     <td>${data[i].mensaje}</td>
                     <td><img class="icons-check-and-fail" src="${icon}" alt="icon"></td>
-                    <td><a href="../../ADMIN-gestion-vacunacion.html?id=${data[i].id}">Ver</a></td>
+                    <td><a href="ADMIN-gestion-vacunacion.html?id=${data[i].id}">Ver</a></td>
                 </tr>
             `
         }
@@ -114,7 +114,7 @@ function ConsultarTurno(nroTurno){
         `
     }else{
         divAlertaTurno.innerHTML = ""
-        imgEstadoTurno = (turno.estado) ? "../../assets/icons/check-icon.png" : "../../assets/icons/fail-icon.png"
+        imgEstadoTurno = (turno.estado) ? "check-icon.png" : "fail-icon.png"
         divInfoTurno.innerHTML = `
             <hr>
             <div class="card-turno">
@@ -141,7 +141,7 @@ function ConsultarTurno(nroTurno){
 function ListarById(paramId){
     const tbody = document.getElementById("tbody-tabla-gestion-vacunacion")
     let dato = data.find(((e) => e.id == paramId))
-    let iconoEstado = (dato.estado) ? "../../assets/icons/check-icon.png" : "../../assets/icons/fail-icon.png"
+    let iconoEstado = (dato.estado) ? "check-icon.png" : "fail-icon.png"
     tbody.innerHTML = `
     <tr>
         <td>${dato.nombre}</td>
@@ -165,7 +165,7 @@ function AceptarTurno(paramId) {
         // Vuelve a convertir a JSON y actualiza en localStorage
         localStorage.setItem("data", JSON.stringify(data));
     }
-    window.location.href = "../../ADMIN-vacunacion.html"
+    window.location.href = "ADMIN-vacunacion.html"
 }
 
 function RechazarTurno(paramId) {
@@ -179,7 +179,7 @@ function RechazarTurno(paramId) {
         // Vuelve a convertir a JSON y actualiza en localStorage
         localStorage.setItem("data", JSON.stringify(data));
     }
-    window.location.href = "../../ADMIN-vacunacion.html"
+    window.location.href = "ADMIN-vacunacion.html"
 }
 
 const VaciarCampos = (...campos) => {

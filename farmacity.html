@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacity</title>
-    <link rel="stylesheet" href="assets/styles/styles.css">
-    <link rel="stylesheet" href="./assets/styles/alert/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inicio.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -14,10 +14,50 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/d3ba0e2c6d.js" crossorigin="anonymous"></script>
 </head>
+<script>
+  // JavaScript para mostrar el overlay
+  let overlay = document.getElementById('overlay');
+  
+  if(!localStorage.getItem("presentacion")){
+    mostrarPopUp()
+  }
+  
+
+  // Mostrar el overlay
+  function openPopup() {
+      overlay.style.display = 'flex';
+  }
+  
+  // Cerrar el overlay
+  function closePopup() {
+      overlay.style.display = 'none';
+      localStorage.setItem("presentacion", true)
+  }
+  
+  // Mostrar la siguiente información
+  function showNext() {
+      let popup = document.querySelector('.popup');
+      popup.innerHTML = `
+          <h2>Integrantes del grupo</h2><hr>
+          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Jorge Emanuel Vélez</a></p>
+          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Pedro Sánchez</a></p>
+          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Juan Ignacio Videla</a></p>
+          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Santiago Sembini</a></p>
+          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Mateo Luca Ardiles Rivadeneira</a></p>
+          <hr><button class="button-alert" onclick="closePopup()">OK</button>
+      `;
+  }
+
+  function mostrarPopUp(){
+    // Mostrar el overlay al cargar la página
+    window.onload = openPopup;
+  }
+
+  </script>
 <body>       
     <header id="header">
         <div class="icon-container">
-          <h1><img src="assets/img/logo-farmacity.png" class="icon" id="logo-farmacity" alt="logo-farmacity"></h1>
+          <h1><img src="logo-farmacity.png" class="icon" id="logo-farmacity" alt="logo-farmacity"></h1>
           <span id="span-buscador">
             <input type="text" class="icons" id="buscador" placeholder="Buscar producto o categoría"><i id="icon-search" class="fa-solid fa-magnifying-glass"></i>
           </span>
@@ -25,28 +65,28 @@
             <div class="dropdown">
               <span class="dropbtn dropbtn-productos">Servicios</span>
               <div class="dropdown-content">
-                <a href="./productos.html" style="text-decoration: none;" class="productos">Productos</a>
-                <a href="./medicamentos.html" style="text-decoration: none;" class="productos">Medicamentos</a>
+                <a href="productos.html" style="text-decoration: none;" class="productos">Productos</a>
+                <a href="medicamentos.html" style="text-decoration: none;" class="productos">Medicamentos</a>
               </div>
             </div>
             <div class="dropdown">
               <span class="dropbtn dropbtn-turnos">Turnos</span>
               <div class="dropdown-content">
-                <a href="./vacunacion.html" style="text-decoration: none;" class="turnos">Vacunación</a>
+                <a href="vacunacion.html" style="text-decoration: none;" class="turnos">Vacunación</a>
               </div>
             </div>
             <div class="dropdown">
               <span class="dropbtn dropbtn-ayuda">Ayuda</span>
               <div class="dropdown-content">
-                <a href="./sobre-nosotros.html" style="text-decoration: none;" class="ayuda">Sobre Nosotros</a>
-                <a href="./contacto.html" style="text-decoration: none;" class="ayuda">Contáctanos</a>
-                <a href="./preguntas-frecuentes.html" style="text-decoration: none;" class="ayuda">Preguntas Frecuentes</a>
+                <a href="sobre-nosotros.html" style="text-decoration: none;" class="ayuda">Sobre Nosotros</a>
+                <a href="contacto.html" style="text-decoration: none;" class="ayuda">Contáctanos</a>
+                <a href="preguntas-frecuentes.html" style="text-decoration: none;" class="ayuda">Preguntas Frecuentes</a>
               </div>
             </div>
             
           </span>
           <span>
-            <a href="farmacity.html"><img src="./assets/img/tufarmacity.png" alt="tu-farmacity" id="logo-tufarmacity"></a>
+            <a href="farmacity.html"><img src="tufarmacity.png" alt="tu-farmacity" id="logo-tufarmacity"></a>
           </span>
           <!--<a href="" class="icon iconos" id="mis-pedidos"><i style="margin-right: 5px;" class="fa-solid fa-truck-fast"></i>Mis pedidos</a>
           -->
@@ -85,22 +125,22 @@
       <div class="contenedor-padre">
         <div class="mitad-izquierda" style="text-align: center;">
           <div class="contenedor-tarjeta">
-            <img src="./assets/icons/obras-sociales/logo-apross.png" alt="Imagen de marca">
+            <img src="logo-apross.png" alt="Imagen de marca">
           </div>
           <div class="contenedor-tarjeta2">
-            <img src="./assets/icons/obras-sociales/logo-osde.png" alt="Imagen de marca">
+            <img src="logo-osde.png" alt="Imagen de marca">
           </div>
           <div class="contenedor-tarjeta">
-            <img src="./assets/icons/obras-sociales/logo-medife.png" alt="Imagen de marca">
+            <img src="logo-medife.png" alt="Imagen de marca">
           </div>
           <div class="contenedor-tarjeta2">
-            <img src="./assets/icons/obras-sociales/logo-swiss-medical.png" alt="Imagen de marca">
+            <img src="logo-swiss-medical.png" alt="Imagen de marca">
           </div>
           <div class="contenedor-tarjeta">
-            <img src="./assets/icons/obras-sociales/logo-pami.png" alt="Imagen de marca">
+            <img src="logo-pami.png" alt="Imagen de marca">
           </div>
           <div class="contenedor-tarjeta2">
-            <img src="./assets/icons/obras-sociales/logo-camisalud.png" alt="Imagen de marca">
+            <img src="logo-camisalud.png" alt="Imagen de marca">
           </div>
           <div class="contenedor-tarjeta">
             <h1>Otros</h1>
@@ -109,25 +149,25 @@
 
 
         <div class="mitad-derecha">
-            <img src="./assets/icons/portadas/portada-tufarmacity.png" alt="" id="img-portada-tufarmacity">
+            <img src="portada-tufarmacity.png" alt="" id="img-portada-tufarmacity">
 
             <div class="mini-container">
               <table class="tabla">
                 <tr>
-                    <td><img class="flotar" src="./assets/icons/bancos/banconacion.png" alt="Imagen 1"></td>
-                    <td><img class="flotar2" src="./assets/icons/bancos/bbva.png" alt="Imagen 2"></td>
+                    <td><img class="flotar" src="banconacion.png" alt="Imagen 1"></td>
+                    <td><img class="flotar2" src="bbva.png" alt="Imagen 2"></td>
                 </tr>
                 <tr>
-                    <td><img class="flotar3" src="./assets/icons/bancos/hsbc.png" alt="Imagen 4"></td>
-                    <td><img class="flotar4" src="./assets/icons/bancos/santander.png" alt="Imagen 5"></td>
+                    <td><img class="flotar3" src="hsbc.png" alt="Imagen 4"></td>
+                    <td><img class="flotar4" src="santander.png" alt="Imagen 5"></td>
                 </tr>
                 <tr>
-                  <td><img class="flotar5" src="./assets/icons/bancos/icbc.png" alt=""></td>
-                  <td><img class="flotar6" src="./assets/icons/bancos/brubank.png" alt=""></td>
+                  <td><img class="flotar5" src="icbc.png" alt=""></td>
+                  <td><img class="flotar6" src="brubank.png" alt=""></td>
                 </tr>
                 <tr>
-                  <td><img class="flotar7" src="./assets/icons/bancos/mastercard.png" alt=""></td>
-                  <td><img class="flotar8" src="./assets/icons/bancos/visa.png" alt=""></td>
+                  <td><img class="flotar7" src="mastercard.png" alt=""></td>
+                  <td><img class="flotar8" src="visa.png" alt=""></td>
                 </tr>
             </table>
             </div>
@@ -138,10 +178,10 @@
       
     <div class="overlay" id="overlay">
       <div class="popup">
-        <h2><img src="./assets/icons/logo-cervantes.jfif" style="width: 150px; height: 150px; margin-bottom: 20px;"><br>Segundo Parcial Sistemas II</h2>
+        <h2><img src="logo-cervantes.jfif" style="width: 150px; height: 150px; margin-bottom: 20px;"><br>Segundo Parcial Sistemas II</h2>
         <hr>
         <p>Esta página corresponde a el segundo parcial de la materia Sistemas II.</p>
-        <p>La página fue creada para cumplir los requerimientos de nuestra organización (<img src="./assets/img/logo-farmacity2.png" style="width: 40px; height: 40px;"> <b>Farmacity S.A</b>)</p>
+        <p>La página fue creada para cumplir los requerimientos de nuestra organización (<img src="logo-farmacity2.png" style="width: 40px; height: 40px;"> <b>Farmacity S.A</b>)</p>
         <p></p>
         <br>
         <button class="button-alert" onclick="showNext()">Siguiente</button>
@@ -155,7 +195,7 @@
 
     <div class="footer">
       <div class="footer-logo">
-          <img src="./assets/img/farmacity-logo-2x2.png" style="height: 40px; width: 40px; border-radius: 0.2em;" alt=""> <h3>Farmacity S.A</h3>
+          <img src="farmacity-logo-2x2.png" style="height: 40px; width: 40px; border-radius: 0.2em;" alt=""> <h3>Farmacity S.A</h3>
       </div>
       <div class="footer-content">
           <div class="footer-section">
@@ -184,45 +224,6 @@
   </div>
 
 </body>
-<script>
-  // JavaScript para mostrar el overlay
-  let overlay = document.getElementById('overlay');
-  
-  if(!localStorage.getItem("presentacion")){
-    mostrarPopUp()
-  }
-  
 
-  // Mostrar el overlay
-  function openPopup() {
-      overlay.style.display = 'flex';
-  }
-  
-  // Cerrar el overlay
-  function closePopup() {
-      overlay.style.display = 'none';
-      localStorage.setItem("presentacion", true)
-  }
-  
-  // Mostrar la siguiente información
-  function showNext() {
-      let popup = document.querySelector('.popup');
-      popup.innerHTML = `
-          <h2>Integrantes del grupo</h2><hr>
-          <p><img src='./assets/icons/userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Jorge Emanuel Vélez</a></p>
-          <p><img src='./assets/icons/userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Pedro Sánchez</a></p>
-          <p><img src='./assets/icons/userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Juan Ignacio Videla</a></p>
-          <p><img src='./assets/icons/userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Santiago Sembini</a></p>
-          <p><img src='./assets/icons/userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Mateo Luca Ardiles Rivadeneira</a></p>
-          <hr><button class="button-alert" onclick="closePopup()">OK</button>
-      `;
-  }
-
-  function mostrarPopUp(){
-    // Mostrar el overlay al cargar la página
-    window.onload = openPopup;
-  }
-
-  </script>
-<script src="farmacity/jquery.js"></script>
+<script src="jquery.js"></script>
 </html>
