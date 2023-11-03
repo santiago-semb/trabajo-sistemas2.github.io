@@ -1,10 +1,10 @@
 let productos = JSON.parse(localStorage.getItem("productos")) || []
 
-if(window.location.pathname == "/productos.html") ListarProductos()
-if(window.location.pathname == "/ADMIN-productos.html") ListarProductosAdmin()
-if(window.location.pathname == "/ADMIN-editar-producto.html") MostrarEditarProductoAdmin()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/productos.html") ListarProductos()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-productos.html") ListarProductosAdmin()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-editar-producto.html") MostrarEditarProductoAdmin()
 
-if(window.location.pathname == "/ADMIN-editar-producto.html"){
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-editar-producto.html"){
     let botonEditar = document.getElementById("btn-edit")
     botonEditar.addEventListener("click", (e) => {
         e.preventDefault()

@@ -1,10 +1,10 @@
 let medicamentos = JSON.parse(localStorage.getItem("medicamentos")) || []
 
-if(window.location.pathname == "/medicamentos.html") ListarMedicamentos()
-if(window.location.pathname == "/ADMIN-medicamentos.html") ListarMedicamentosAdmin()
-if(window.location.pathname == "/ADMIN-editar-medicamento.html") MostrarEditarMedicamentoAdmin()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/medicamentos.html") ListarMedicamentos()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-medicamentos.html") ListarMedicamentosAdmin()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-editar-medicamento.html") MostrarEditarMedicamentoAdmin()
 
-if(window.location.pathname == "/ADMIN-editar-medicamento.html"){
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-editar-medicamento.html"){
     let botonEditar = document.getElementById("btn-edit")
     botonEditar.addEventListener("click", (e) => {
     e.preventDefault()

@@ -1,7 +1,7 @@
 let Lista= JSON.parse(localStorage.getItem("tablaEmpleado")) || []
 
-if(window.location.pathname == "/ADMIN-gestion-empleado.html") Listar()
-if(window.location.pathname == "/ADMIN-gestion-empleado.html") Estadisticas()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-gestion-empleado.html") Listar()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-gestion-empleado.html") Estadisticas()
 
 function Guardar(){
     const empleado=document.getElementById("_txtEmpleado-farmacity")

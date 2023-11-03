@@ -1,6 +1,6 @@
 let data =  JSON.parse(localStorage.getItem("data")) || []
 
-if(window.location.pathname == "/ADMIN-vacunacion.html") Listar()
+if(window.location.pathname == "/trabajo-sistemas2.github.io/ADMIN-vacunacion.html") Listar()
 
 function Guardar(){
     let nombre = document.getElementById("nombre")
