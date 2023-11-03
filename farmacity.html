@@ -14,46 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/d3ba0e2c6d.js" crossorigin="anonymous"></script>
 </head>
-<script>
-  // JavaScript para mostrar el overlay
-  let overlay = document.getElementById('overlay');
-  
-  if(!localStorage.getItem("presentacion")){
-    mostrarPopUp()
-  }
-  
-
-  // Mostrar el overlay
-  function openPopup() {
-      overlay.style.display = 'flex';
-  }
-  
-  // Cerrar el overlay
-  function closePopup() {
-      overlay.style.display = 'none';
-      localStorage.setItem("presentacion", true)
-  }
-  
-  // Mostrar la siguiente información
-  function showNext() {
-      let popup = document.querySelector('.popup');
-      popup.innerHTML = `
-          <h2>Integrantes del grupo</h2><hr>
-          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Jorge Emanuel Vélez</a></p>
-          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Pedro Sánchez</a></p>
-          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Juan Ignacio Videla</a></p>
-          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Santiago Sembini</a></p>
-          <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Mateo Luca Ardiles Rivadeneira</a></p>
-          <hr><button class="button-alert" onclick="closePopup()">OK</button>
-      `;
-  }
-
-  function mostrarPopUp(){
-    // Mostrar el overlay al cargar la página
-    window.onload = openPopup;
-  }
-
-  </script>
 <body>       
     <header id="header">
         <div class="icon-container">
@@ -224,6 +184,46 @@
   </div>
 
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // JavaScript para mostrar el overlay
+    let overlay = document.getElementById('overlay');
+    
+    if(!localStorage.getItem("presentacion")){
+      mostrarPopUp()
+    }
+    
 
+    // Mostrar el overlay
+    function openPopup() {
+        overlay.style.display = 'flex';
+    }
+    
+    // Cerrar el overlay
+    function closePopup() {
+        overlay.style.display = 'none';
+        localStorage.setItem("presentacion", true)
+    }
+    
+    // Mostrar la siguiente información
+    function showNext() {
+        let popup = document.querySelector('.popup');
+        popup.innerHTML = `
+            <h2>Integrantes del grupo</h2><hr>
+            <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Jorge Emanuel Vélez</a></p>
+            <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Pedro Sánchez</a></p>
+            <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Juan Ignacio Videla</a></p>
+            <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Santiago Sembini</a></p>
+            <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Mateo Luca Ardiles Rivadeneira</a></p>
+            <hr><button class="button-alert" onclick="closePopup()">OK</button>
+        `;
+    }
+
+    function mostrarPopUp(){
+      // Mostrar el overlay al cargar la página
+      window.onload = openPopup;
+    }
+  });
+  </script>
 <script src="jquery.js"></script>
 </html>
