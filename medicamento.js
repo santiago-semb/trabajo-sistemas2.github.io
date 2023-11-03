@@ -47,6 +47,11 @@ function CargarMedicamento(){
         let jsonMedicamentos = JSON.stringify(medicamentos)
         localStorage.setItem("medicamentos", jsonMedicamentos)
 
+        nombreProducto.value = ""
+        descripcionProducto.value = ""
+        precioProducto.value = ""
+        imgProducto.value = ""
+
         const divNoMedicamentos = document.getElementById("alert-noProducts")
         divNoMedicamentos.innerHTML = ""
         ListarMedicamentosAdmin()
@@ -242,7 +247,7 @@ function ListarMedicamentosAdmin(){
     }else{
         const divTabla = document.getElementById("container-tableMedicamentos")
         divTabla.innerHTML = `
-            <table id="medicamentos-table" class="table table-striped">
+            <table id="medicamentos-table" class="table table-striped" style="margin-bottom: 30px">
             <thead>
                 <tr>
                     <th></th>

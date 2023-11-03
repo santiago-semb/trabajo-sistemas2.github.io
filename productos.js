@@ -46,6 +46,11 @@ function CargarProducto(){
       let jsonProductos = JSON.stringify(productos)
       localStorage.setItem("productos", jsonProductos)
 
+      nombreProducto.value = ""
+      descripcionProducto.value = ""
+      precioProducto.value = ""
+      imgProducto.value = ""
+
       const divNoProducts = document.getElementById("alert-noProducts")
       divNoProducts.innerHTML = ""
       ListarProductosAdmin()
@@ -243,7 +248,7 @@ function ListarProductosAdmin(){
     }else{
         const divAdminTable = document.getElementById("container-table-admProductos")
         divAdminTable.innerHTML = `
-            <table id="product-table" class="table table-striped">
+            <table id="product-table" class="table table-striped" style="margin-bottom: 30px">
                 <thead>
                 <tr>
                     <th></th>
