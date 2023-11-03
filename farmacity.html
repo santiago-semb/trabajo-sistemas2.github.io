@@ -144,7 +144,7 @@
         <p>La página fue creada para cumplir los requerimientos de nuestra organización (<img src="logo-farmacity2.png" style="width: 40px; height: 40px;"> <b>Farmacity S.A</b>)</p>
         <p></p>
         <br>
-        <button class="button-alert" onclick="showNext()">Siguiente</button>
+        <button class="button-alert" id="btn-presentacion">Siguiente</button>
       </div>
     </div>
 
@@ -183,29 +183,21 @@
       </div>
   </div>
 
-</body>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // JavaScript para mostrar el overlay
-    let overlay = document.getElementById('overlay');
-    
-    if(!localStorage.getItem("presentacion")){
-      mostrarPopUp()
-    }
-    
 
-    // Mostrar el overlay
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    let overlay = document.getElementById('overlay');
+
     function openPopup() {
         overlay.style.display = 'flex';
     }
-    
-    // Cerrar el overlay
+
     function closePopup() {
         overlay.style.display = 'none';
-        localStorage.setItem("presentacion", true)
+        localStorage.setItem("presentacion", true);
     }
-    
-    // Mostrar la siguiente información
+
     function showNext() {
         let popup = document.querySelector('.popup');
         popup.innerHTML = `
@@ -215,15 +207,26 @@
             <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Juan Ignacio Videla</a></p>
             <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Santiago Sembini</a></p>
             <p><img src='userimg.jfif' style='width: 40px; height: 40px'> <a href='#'>Mateo Luca Ardiles Rivadeneira</a></p>
-            <hr><button class="button-alert" onclick="closePopup()">OK</button>
+            <hr><button class="button-alert" id='btn-close'>OK</button>
         `;
+        let btnclose = document.getElementById("btn-close");
+        btnclose.addEventListener("click", closePopup);
     }
 
-    function mostrarPopUp(){
-      // Mostrar el overlay al cargar la página
-      window.onload = openPopup;
+    let storedPresentacion = localStorage.getItem("presentacion");
+
+    if (!storedPresentacion) {
+        openPopup();
+    } else {
+        closePopup();
     }
-  });
-  </script>
+
+    let btnPresentacion = document.getElementById("btn-presentacion")
+    btnPresentacion.addEventListener("click", showNext)
+
+    });
+
+    </script>
+</body>
 <script src="jquery.js"></script>
 </html>
