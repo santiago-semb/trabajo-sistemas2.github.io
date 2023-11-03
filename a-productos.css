@@ -35,7 +35,7 @@
   }
 #main-productos {
     display: flex;
-    height: 100%;
+    height: auto;
   }
 .left-pane {
     flex: 0.7;
